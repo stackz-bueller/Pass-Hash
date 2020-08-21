@@ -1,11 +1,9 @@
 import hashlib, binascii, os
-salt = bytes(os.getenv('salt'), 'utf-8')
-
 
 class Engine:
     def hash_password(password):
         """Hash a password for storing."""
-
+        salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
         passHash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'),
                                        salt, 100000)
         passHash = binascii.hexlify(passHash)

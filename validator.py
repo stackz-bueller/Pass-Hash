@@ -59,7 +59,7 @@ def PasswordsValidator():
                         color.END)
                 else:
                     print('\n', color.BOLD, color.DARKCYAN,
-                          'This password is accepted!', color.END)
+                          'This password is accepted!', color.END,'\n')
                     break
             else:
                 print(color.BOLD, '\nYour passwords do not match!\n',
