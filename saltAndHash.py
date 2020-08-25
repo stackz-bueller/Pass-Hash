@@ -1,5 +1,6 @@
 import hashlib, binascii, os
 
+
 class Engine:
     def hash_password(password):
         """Hash a password for storing."""

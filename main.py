@@ -26,8 +26,8 @@ if __name__ == '__main__':
             possible_password = valid.get_pass()
             if sugar.Engine.verify_password(hash, possible_password):
                 del possible_password
-                print(color.BOLD, color.DARKCYAN, '\n\tThe password is verified!',
-                      color.END)
+                print(color.BOLD, color.DARKCYAN,
+                      '\n\tThe password is verified!', color.END)
                 print(color.BOLD, color.GREEN, '\n\tScript End', color.END)
                 break
             else:
