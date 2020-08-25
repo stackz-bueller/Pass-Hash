@@ -17,13 +17,12 @@ def printPasswordSpecs():
     )
 
     print(
-        '\tThe password must have', Setup.color.BOLD, ' at least',
-        Setup.color.END, '8 characters\n\n', Setup.color.BOLD,
+        '\tThe password must have at least:', Setup.color.RED, '8 characters\n\n', Setup.color.END, Setup.color.GREEN,
         '\tThe password must contain at least one of the following:\n\t\t'
         + 'A Letter\n\t\tA Capital Letter\n\t\tA Special Character\n',
         Setup.color.END)
     print(
-        Setup.color.BOLD,
+        Setup.color.RED,
         '\tThe password must not contain:\n\t\tA Leading \'!\' or \'?\'' +
         '\n\t\tRepeating Characters or Numbers greater than 2\n\t\tA Whitespace\n',
         Setup.color.END)

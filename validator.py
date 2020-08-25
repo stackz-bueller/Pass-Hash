@@ -4,14 +4,22 @@ import algo
 
 Algorithm = algo.Algorithm
 
+
+def get_pass():
+    return getpass(prompt='Please enter your password: ')
+
+
+def reenter_pass():
+    return getpass(prompt='Please re-enter your password: ')
+
+
 # Validator
 def PasswordsValidator():
     color = setup.Setup.color
     try:
         while True:
-            pass1 = getpass(prompt='Please enter your password: ')
-
-            pass2 = getpass(prompt='Please re-enter your password: ')
+            pass1 = get_pass()
+            pass2 = reenter_pass()
 
             if pass1 == pass2:
                 if Algorithm.empty(pass2):
@@ -59,7 +67,7 @@ def PasswordsValidator():
                         color.END)
                 else:
                     print('\n', color.BOLD, color.DARKCYAN,
-                          'This password is accepted!', color.END,'\n')
+                          'This password is accepted!', color.END, '\n')
                     break
             else:
                 print(color.BOLD, '\nYour passwords do not match!\n',
