@@ -66,13 +66,11 @@ def PasswordsValidator():
                         '\nThis password is not valid, it contains a space!\n',
                         color.END)
                 else:
-                    print('\n', color.BOLD, color.DARKCYAN,
-                          'This password is accepted!', color.END, '\n')
-                    break
+                    print('\n', color.BOLD, color.DARKCYAN,'This password is accepted!', color.END, '\n\n')
+                    return pass2
             else:
                 print(color.BOLD, '\nYour passwords do not match!\n',
                       color.END)
-        return pass2
 
     except KeyboardInterrupt:
         print('Interrupted!')
